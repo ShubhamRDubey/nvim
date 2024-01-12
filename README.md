@@ -16,8 +16,6 @@ This repository contains my Neovim configuration, leveraging various plugins to 
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): A highly extensible fuzzy finder over lists.
 
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim): A clean, dark Neovim theme.
-
 ## Usage
 
 1. Clone this repository to your Neovim configuration directory:

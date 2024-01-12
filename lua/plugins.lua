@@ -1,11 +1,4 @@
 return{ 
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
-
     {   
         "nvim-tree/nvim-tree.lua",
         version = "*",
