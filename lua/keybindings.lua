@@ -14,9 +14,12 @@ vim.api.nvim_set_keymap('n', '<leader>h', '<C-W>h', { noremap = true, silent = t
 
 -- Save file with Ctrl-s
 vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader><leader>', ':w<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>s', ':wq<CR>', { noremap = true, silent = true })
 
 -- Quit Neovim with Ctrl-q
 vim.api.nvim_set_keymap('n', '<C-q>', ':q<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', { noremap = true, silent = true })
 
 -- Save and quit with Ctrl-s and Ctrl-q in command-line mode
 vim.api.nvim_set_keymap('c', '<C-s>', '<C-u>w<CR>', { noremap = true, silent = true })
@@ -25,7 +28,7 @@ vim.api.nvim_set_keymap('c', '<C-q>', '<C-u>q<CR>', { noremap = true, silent = t
 -- nvim-tree shortcuts
 vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<leader>v', ':vsp', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>v', ':vsp ', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>x', ':sp ', { noremap = true, silent = true })
 
 
