@@ -1,10 +1,10 @@
 vim.g.mapleader = " "
 
 -- resizing the panes
-vim.api.nvim_set_keymap('n', '<A-j>', ':resize -5<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-k>', ':resize +5<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-h>', ':vertical resize -5<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-l>', ':vertical resize +5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-j>', ':resize -5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', ':resize +5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-h>', ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-l>', ':vertical resize +5<CR>', { noremap = true, silent = true })
 
 -- changing the panes
 vim.api.nvim_set_keymap('n', '<leader>j', '<C-W>j', { noremap = true, silent = true })
@@ -39,10 +39,10 @@ vim.api.nvim_set_keymap('n', '<leader>x', ':sp ', { noremap = true, silent = tru
 -- vim.api.nvim_set_keymap('n', '<c-right>', '<c-w>>', { noremap = true })
 
 -- move windows 
-vim.api.nvim_set_keymap('n', '<A-y>', '<C-W>H', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-u>', '<C-W>J', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-i>', '<C-W>K', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-o>', '<C-W>L', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-y>', '<C-W>H', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-u>', '<C-W>J', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-i>', '<C-W>K', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-o>', '<C-W>L', { noremap = true })
 
 
 -- copy commands
