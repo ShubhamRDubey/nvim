@@ -1,42 +1,86 @@
 return{ 
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
-    {   
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly", 
+    lazy = false, 
+    priority = 1000 
+  },
+
+  {   
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {
+        view = {
+          width = "22%",
+          side = "left",
         },
-        config = function()
-            require("nvim-tree").setup {}
-        end,
-    },
+        git = {
+          enable = false,
+        }  
+      }
+    end,
+  },
 
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require("lualine").setup {
-                options = { theme = 'ayu_dark' }
-            }
-        end,
-    },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require("lualine").setup {
+        options = { theme = 'ayu_dark' }
+      }
+    end,
+  },
 
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
+  {
+    'hrsh7th/nvim-cmp',
+    require("cmp").setup({
+      sources = {
+        { name = 'buffer' }, -- Add buffer source
+      },
+    })
+  },
 
-    {
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        opts = {} -- this is equalent to setup({}) function
-    }
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {}
+  },
+
+  {
+    'stevearc/conform.nvim',
+    opts = {}
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+--    build = ":TSUpdate",
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+--        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+        sync_install = false,
+        highlight = { enable = true },
+        indent = { enable = true },  
+      })
+    end
+  }
 }
 
